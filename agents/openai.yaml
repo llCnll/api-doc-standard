@@ -1,0 +1,4 @@
+interface:
+  display_name: "接口文档标准化"
+  short_description: "按业务功能整理和审核清晰、完整且可直接使用的中文接口文档"
+  default_prompt: "Use $api-doc-standard to draft or review a concise API page for this feature."
