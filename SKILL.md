@@ -5,7 +5,7 @@ description: Create or review concise Chinese API documentation organized by bus
 
 # API Documentation Standard
 
-Produce documentation that lets a caller understand which capability to use, how to call it, and how to interpret the result. Organize each page around a business feature.
+Use the project's document carriers, template, and publication workflow first. Keep maintained sources and complete published pages distinct; this skill supplies supporting checks. Organize caller-facing pages around a business feature so callers can choose, call, and interpret the capability.
 
 ## Page scope
 
@@ -15,10 +15,12 @@ Produce documentation that lets a caller understand which capability to use, how
 
 ## Contract quality
 
+Apply these completeness checks to the final caller-facing page and its sources.
+
 - Describe the confirmed caller-visible contract. Check the relevant requirements/design against the project schema, route, or implementation where available. Record discrepancies between the confirmed contract and observed behavior so they can be resolved explicitly.
 - Include the details a caller needs to construct a valid request and understand the response: path and method, request format, authorization when relevant, fields, types, required conditions, and meaningful constraints.
 - Explain enum values, defaults, missing/null/empty behavior, side effects, and error handling only where they affect how callers use the feature.
 - Keep examples consistent with the field descriptions. Use a complete ordinary request and success response; add failure or boundary examples when they clarify an important contract.
 - For high-risk operations, state a minimal reproducible verification and expected result.
 
-Use the [feature page template](references/feature-page-template.md) as a starting point. Select and adapt sections to the feature so each section helps callers construct requests or interpret responses.
+Use the [feature page template](references/feature-page-template.md) when the project leaves structure unspecified. Its sections describe complete pages; local supplements follow the repository template.
