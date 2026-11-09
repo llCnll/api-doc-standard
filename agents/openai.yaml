@@ -1,4 +1,4 @@
 interface:
   display_name: "接口文档标准化"
-  short_description: "按业务功能整理和审核清晰、完整且可直接使用的中文接口文档"
-  default_prompt: "Use $api-doc-standard to draft or review a concise API page for this feature."
+  short_description: "遵循项目契约、载体和模板，核对功能页面完整性及发布结果"
+  default_prompt: "Use $api-doc-standard to create or review this feature's API documentation using the repository's contract sources and template."

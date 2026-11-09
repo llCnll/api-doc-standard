@@ -1,26 +1,26 @@
 ---
 name: api-doc-standard
-description: Create or review concise Chinese API documentation organized by business feature page, with clear request and response contracts. Use when drafting, restructuring, or reviewing API docs.
+description: Create, organize, or review concise Chinese API documentation using project contract sources, feature pages, and publication rules.
 ---
 
 # API Documentation Standard
 
-Use the project's document carriers, template, and publication workflow first. Keep maintained sources and complete published pages distinct; this skill supplies supporting checks. Organize caller-facing pages around a business feature so callers can choose, call, and interpret the capability.
+Help callers choose a capability, construct a valid request, and interpret its results. Provide API document completeness checks and a default feature-page structure.
 
-## Page scope
+## Authority and carriers
 
-- Give each page one cohesive feature or caller workflow. Include its related routes on that page, with a separate request and response section for each route.
-- Give independent capabilities separate pages when that makes the documentation easier to navigate.
-- Preserve confirmed project terminology and conventions. Record each decision at the scope where it applies; establish a project-wide convention when it is confirmed to apply across features.
+Use the project's authoritative contract sources, document carriers, template, and publication workflow. User instructions take precedence over general defaults. Keep maintained sources and complete published pages distinct.
 
-## Contract quality
+Express confirmed caller-visible behavior. Confirmed requirements and design define the target contract; same-version declarations and actual entry points establish current behavior. For a new operation, document the confirmed target and state its implementation and validation status. Resolve material behavioral choices in the authoritative contract before finalizing the page.
 
-Apply these completeness checks to the final caller-facing page and its sources.
+Use project-approved, redacted data in sources, examples, and published pages. Represent authentication credentials with placeholders, and handle publishing credentials in the authorized tool context.
 
-- Describe the confirmed caller-visible contract. Check the relevant requirements/design against the project schema, route, or implementation where available. Record discrepancies between the confirmed contract and observed behavior so they can be resolved explicitly.
-- Include the details a caller needs to construct a valid request and understand the response: path and method, request format, authorization when relevant, fields, types, required conditions, and meaningful constraints.
-- Explain enum values, defaults, missing/null/empty behavior, side effects, and error handling only where they affect how callers use the feature.
-- Keep examples consistent with the field descriptions. Use a complete ordinary request and success response; add failure or boundary examples when they clarify an important contract.
-- For high-risk operations, state a minimal reproducible verification and expected result.
+Apply [contract checks](references/contract-checklist.md) to each authoring, organizing, reviewing, or publishing task according to its maintained source and final output.
 
-Use the [feature page template](references/feature-page-template.md) when the project leaves structure unspecified. Its sections describe complete pages; local supplements follow the repository template.
+## Task routing
+
+- **Create or organize:** Follow the project template. For page structure delegated to this skill, organize one cohesive feature or caller workflow per page, with separate request and response sections for related routes.
+- **Review:** Report discrepancies with their source, confirmation status, and caller impact.
+- **Publish or synchronize:** Read [publication checks](references/publication-checklist.md) and use the repository's configured workflow and existing authorization.
+
+The [feature page template](references/feature-page-template.md) is the complete-page default. Local supplements follow the repository's carrier rules. Read supporting references according to the requested operation and deliver the specified document sources and output.
